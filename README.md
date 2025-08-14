@@ -1,72 +1,107 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
+# Car Price Analysis
 
-Welcome,
+Car Price Analysis is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualization of car pricing data. The tool supports CSV data formats and provides an intuitive workflow for both novice and expert data scientists.
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+## Dataset Content
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+The dataset used for this project includes detailed information about various car models, such as make, model, year, engine size, horsepower, and price. The primary datasets are:
+- `data/car_price_clean.csv`
+- `data/CarPrice_Assignment.csv`
 
-## How to use this repo
+These datasets are of reasonable size and do not exceed the repository's maximum size of 100GB.
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+Data source: https://www.kaggle.com/datasets/hellbuoy/car-price-prediction 
 
-1. Copy the URL of your repository to your clipboard.
+## Business Requirements
 
-1. In VS Code, select **File** -> **Open Folder**.
+- Identify key factors influencing car prices.
+- Build a predictive model to estimate car prices based on features.
+- Provide actionable insights for car buyers and sellers.
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
+## Hypothesis and How to Validate
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
+- **Hypothesis 1:** Engine size and horsepower are positively correlated with car price.
+	- *Validation:* Use correlation analysis and regression plots.
+- **Hypothesis 2:** Brand and model year significantly impact car price.
+	- *Validation:* Use group-by analysis and ANOVA tests.
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+## Project Plan
 
-1. In VS Code, select **File** > **Open Folder** again.
+- **Data Collection:** Gathered from provided CSV files.
+- **Data Processing:** Cleaned and preprocessed data for analysis.
+- **Analysis:** Explored data using statistical and visualization techniques.
+- **Interpretation:** Derived insights and built predictive models.
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+The research methodologies were chosen for their effectiveness in handling tabular data and providing interpretable results.
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
+## Mapping Business Requirements to Data Visualisations
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+- **Key Factors Analysis:** Bar plots and correlation heatmaps.
+- **Predictive Modeling:** Regression plots and residual analysis.
+- **Brand/Year Impact:** Boxplots and grouped bar charts.
 
-1. Choose **Venv** from the dropdown list.
+## Analysis Techniques Used
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+- **Exploratory Data Analysis (EDA):** Descriptive statistics, missing value analysis.
+- **Visualization:** Matplotlib, Seaborn, Plotly for interactive plots.
+- **Predictive Modeling:** Linear regression, decision trees.
+- **Limitations:** Limited by dataset size and feature availability. Alternative approaches (e.g., feature engineering) were used to address these.
 
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
+**Generative AI tools** were used for ideation, code optimization, and documentation.
 
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
+## Ethical Considerations
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+- **Data Privacy:** No personal data present.
+- **Bias/Fairness:** Checked for brand/model bias in pricing.
+- **Legal/Societal Issues:** Used only open-source datasets.
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+## Dashboard Design
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
+- **Main Page:** Overview statistics and key insights.
+- **Exploration Page:** Interactive plots (e.g., price vs. engine size).
+- **Prediction Page:** Input features to predict car price.
+- **Widgets:** Dropdowns for brand/model, sliders for year/engine size, image displays.
 
- ```console
- pip3 install -r requirements.txt
- ```
+Insights were communicated using clear visualizations and concise explanations for both technical and non-technical audiences.
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+## Unfixed Bugs
 
-1. Click the **kernel** button and choose **Python Environments**.
+- Occasional rendering issues with interactive plots in some browsers.
+- Some rare outliers in the dataset were not fully addressed due to lack of additional data.
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+Knowledge gaps were addressed through peer feedback and online resources.
 
-```console
-! python --version
-```
+## Development Roadmap
 
-## Deployment Reminders
+- **Challenges:** Data cleaning, feature selection, model tuning.
+- **Strategies:** Iterative testing, peer code reviews.
+- **Next Steps:** Explore advanced ML models, deploy dashboard online.
 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+## Main Data Analysis Libraries
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+- **pandas:** Data manipulation and analysis.
+	```python
+	import pandas as pd
+	df = pd.read_csv('data/car_price_clean.csv')
+	```
+- **numpy:** Numerical operations.
+- **matplotlib/seaborn/plotly:** Data visualization.
+- **scikit-learn:** Machine learning models.
+
+## Credits
+
+- Parts of this project, including code, documentation, and ideation, were assisted by AI tools such as OpenAI's ChatGPT and GitHub Copilot.
+
+### Content
+
+- Data cleaning techniques inspired by [Kaggle tutorials](https://www.kaggle.com/).
+- EDA and visualization methods adapted from various open-source repositories.
+- Data source: https://www.kaggle.com/datasets/hellbuoy/car-price-prediction 
+
+## Acknowledgements
+
+Special thanks to peers, instructors, and the open-source community for their support and feedback throughout this project.
+
+
