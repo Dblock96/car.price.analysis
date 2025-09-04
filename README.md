@@ -1,8 +1,41 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Car Price Analysis
+# Car Price Analysis - Hamza Hackathon Team 3 🚗
 
-Car Price Analysis is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualization of car pricing data. The tool supports CSV data formats and provides an intuitive workflow for both novice and expert data scientists.
+Car Price Analysis is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualization of car pricing data. This project was developed as part of the Hamza Hackathon by Team 3, demonstrating collaborative development practices and data science excellence.
+
+## 🎯 Hackathon Project Overview
+
+**Team:** Team 3 - Hamza Hackathon  
+**Project:** Interactive Car Price Analysis Dashboard  
+**Tech Stack:** Python, Streamlit, Pandas, Scikit-learn, Plotly  
+
+### 🏆 Project Goals
+- Build an interactive web application for car price analysis
+- Implement machine learning models for price prediction
+- Provide valuable insights for car buyers and sellers
+- Demonstrate best practices in collaborative development
+
+## 🚀 Quick Start
+
+### Run the Application
+```bash
+# Clone the repository
+git clone https://github.com/Dblock96/car.price.analysis.git
+cd car.price.analysis
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
+```
+
+The application provides:
+- **Overview Page:** Dataset statistics and insights
+- **Data Exploration:** Interactive visualizations and analysis
+- **Price Prediction:** ML-powered car price predictions
+- **Team Info:** Collaboration details and project status
 
 ## Dataset Content
 
@@ -100,8 +133,36 @@ Knowledge gaps were addressed through peer feedback and online resources.
 - EDA and visualization methods adapted from various open-source repositories.
 - Data source: https://www.kaggle.com/datasets/hellbuoy/car-price-prediction 
 
-## Acknowledgements
+## 👥 Team Collaboration
 
-Special thanks to peers, instructors, and the open-source community for their support and feedback throughout this project.
+### How to Contribute
+We welcome contributions from all team members and collaborators! Here's how to get started:
+
+1. **Read our guides:**
+   - [CONTRIBUTING.md](CONTRIBUTING.md) - Development workflow and guidelines
+   - [TEAM.md](TEAM.md) - Team member information and roles
+   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Collaboration standards
+
+2. **Development workflow:**
+   - Fork the repository and create a feature branch
+   - Make your changes following our coding standards
+   - Test your changes thoroughly
+   - Submit a pull request with a clear description
+
+3. **Communication:**
+   - Use GitHub Issues for bug reports and feature requests
+   - Participate in code reviews and discussions
+   - Follow our team communication guidelines
+
+### Current Team Status
+- **Data Science:** ✅ Complete - Data cleaning and analysis
+- **Frontend Development:** 🔄 In Progress - Streamlit dashboard
+- **Machine Learning:** 🔄 In Progress - Predictive models
+- **Documentation:** ✅ Complete - Comprehensive guides
+- **Testing:** ⏳ Planned - Quality assurance testing
+
+## 🎉 Acknowledgements
+
+Special thanks to our hackathon team members and the open-source community for their support and contributions to this project.
 
 
