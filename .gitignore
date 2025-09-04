@@ -6,7 +6,6 @@ env/
 __pycache__/
 *.py[cod]
 node_modules/
-.github/
 cloudinary_python.txt
 kaggle.json
 .venv/
